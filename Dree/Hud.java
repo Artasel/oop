@@ -24,17 +24,3 @@ public class Hud {
     }       
 }
 
-
-
-
-// for (String i : listMan) {
-//     String arr[];
-//     arr = i.split(" ");
-//     if (!listChild.containsKey(arr[1] + " " + arr[2])) {
-//         listChild.put(arr[4] + " " + arr[5], arr[1] + " " + arr[2] + " " + arr[3]);
-//     } else {
-//         listChild.put(arr[4] + " " + arr[5], listChild.get(arr[4] + " " + arr[5]) +  arr[1] + " " + arr[2] + " " + arr[3]);
-//     }
-
-//     System.out.println(listChild);
-// }
