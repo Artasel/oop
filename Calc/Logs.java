@@ -11,9 +11,6 @@ import java.io.IOException;
 public class Logs {
     public static void writeFile(String info) {
         try (FileWriter fw = new FileWriter("file.txt", true)) {
-            //if(fw.length() == 0)
-         //   fw.write(info); // .append
-         //   fw.append('\n');
             fw.append(info);
             fw.append('\n');
             fw.flush();
