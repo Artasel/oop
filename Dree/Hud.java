@@ -2,7 +2,9 @@ package Dree;
 
 import java.util.Scanner;
 
+//*Общение с пользователем */
 public class Hud {
+    //*Приветствие и возможности программы */
     static void hello() {
         System.out.println("Приветствуем вас в нашем приложении!!!");
     }

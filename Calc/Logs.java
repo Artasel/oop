@@ -2,13 +2,14 @@ package Calc;
 
 import java.io.BufferedReader;
 import java.io.File;
-//import java.io.FileOutputStream;
 import java.io.FileNotFoundException;   
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+//*Запись и вывод логов программы */
 public class Logs {
+    //*Запись логов в файл txt */
     public static void writeFile(String info) {
         try (FileWriter fw = new FileWriter("file.txt", true)) {
             fw.append(info);
@@ -19,6 +20,7 @@ public class Logs {
         }
     }
 
+    //*Вывод содержимого файла */
     public static void readFile() {
         try {
             File file = new File("/C:/Users/Tarona/Desktop/oop/file.txt");

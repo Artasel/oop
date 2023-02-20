@@ -15,6 +15,7 @@ package Dree;
 
 import java.io.IOException;
 
+//*Запуск проги и ее логика */
 public class Home1 {
     public static void main(String[] args) throws IOException {
         Man qwe = new Man("Алексей", "Бобкин", "Ильич", "Надежда Юрьевна", "Илья Петрович");

@@ -1,6 +1,7 @@
 package Calc;
-
+//*Логика программы */
 public class Controller {
+    //* Логика программы */
     public static void butenClick() {
         UI.hi();
         while (true) {

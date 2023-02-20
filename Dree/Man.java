@@ -17,6 +17,7 @@ class Man {
 
     static ArrayList<String> listMan = new ArrayList<>();
 
+    //*Конструктор */
     public Man(String name, String surName, String patronymic, String mom, String dad) {
         this.name = name;
         this.surName = surName;
@@ -49,6 +50,7 @@ class Man {
         return dad;
     }
 
+    //*Добавить в список */
     static void addList(String id, String name, String surName, String patronymic, String mom, String dad) {
         listMan.add("Уникальный идентификатор: " + id);
         listMan.add("Имя: " + name);
@@ -59,12 +61,14 @@ class Man {
         listMan.add(" ");
     }
 
+    //*Вывод списка */
     static void readList() {
         for (String i : listMan) {
             System.out.println(i);
         }
     }
 
+    //*Поиск id */
     static String searchId() {
         if (listMan.size() != 0) {
 
@@ -100,11 +104,11 @@ class Man {
         }
     }
 
+    //*Поиск конкретного человека в списке */
     static String searchMan() {
         Scanner iScanner = new Scanner(System.in);
         System.out.printf("Введите id человека, которого надо найти: ");
         String idInput = iScanner.nextLine();
-     //   iScanner.close();
 
         boolean prov = false;
         String name = "";
@@ -124,12 +128,7 @@ class Man {
                         arr = listMan.get(j).split(" ");
                         name = arr[1];
                     }
-        
-                    // if (listMan.get(j).contains("Фамилия")) {
-                    //     arr = listMan.get(j).split(" ");
-                    //     surName = arr[1];
-                    // }
-        
+
                     if (listMan.get(j).contains("Отчество")) {
                         arr = listMan.get(j).split(" ");
                         patronymic = arr[1];
@@ -150,6 +149,7 @@ class Man {
         return nameRes;
     }
     
+    //*ДЛя добавления человека в список */
     static void addMan() {
         Scanner iScanner = new Scanner(System.in);
         System.out.printf("Введите имя: ");
@@ -166,22 +166,22 @@ class Man {
 
         System.out.printf("Введите фио отца: ");
         String dad = iScanner.nextLine();
-     //   iScanner.close();
 
         man(name, surName, patronymic, mom, dad);
     }
 
+    //*Для добавления в список */
     private static void man(String name, String surName, String patronymic, String mom, String dad) {
         id = searchId();
 
         addList(id, name, surName, patronymic, mom, dad);
     }
 
+    //*Для удаления из списка */
     static void delMan() {
         Scanner iScanner = new Scanner(System.in);
         System.out.printf("Введите id человека, которого надо удалить: ");
         String idDel = iScanner.nextLine();
-      //  iScanner.close();
         
         boolean prov = false;
 
@@ -211,6 +211,7 @@ class Relationships extends Man {
         super(name, surName, patronymic, mom, dad);
     }
 
+    //*ищем детей и добавляем их в список */
     static void searChildren(String names) {
         Map<String, String> listChild = new HashMap<>();
         String name = "";
